@@ -12,9 +12,9 @@ public class Item {
     public String toString() {
         String s;
         s = this.name + "\n" + Arrays.toString(this.desc) + "\n" +
-            this.equipment_category + "\n" +
-            this.cost + "\n" + Arrays.toString(this.properties) +
-            "\n" + this.weight + " pounds \n" + this.url;
+        this.equipment_category + "\n" +
+        this.cost + "\n" + Arrays.toString(this.properties) +
+        "\n" + this.weight + " pounds \n" + this.url;
         return s;
     }
 }
