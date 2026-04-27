@@ -3,6 +3,7 @@ module com.example.itemlist {
     requires javafx.fxml;
 
     requires org.controlsfx.controls;
+    requires com.google.gson;
 
     opens com.example.itemlist to javafx.fxml;
     exports com.example.itemlist;
