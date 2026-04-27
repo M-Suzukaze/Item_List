@@ -1,3 +1,5 @@
+package com.example.itemlist;
+
 import java.util.Arrays;
 
 public class Item {

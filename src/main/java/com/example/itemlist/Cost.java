@@ -1,3 +1,5 @@
+package com.example.itemlist;
+
 public class Cost {
 
         public double quantity;

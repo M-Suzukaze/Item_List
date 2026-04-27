@@ -1,7 +1,9 @@
-public class Equipment_Category {
+package com.example.itemlist;
+
+public class Properties {
     public String name;
 
-    public String toString () {
+    public String toString() {
         String s;
         s = this.name;
         return s;
