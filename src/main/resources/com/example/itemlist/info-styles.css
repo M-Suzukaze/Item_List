@@ -3,6 +3,7 @@
 }
 
 .label {
+    -fx-padding: 2px;
     -fx-background-color: #ffffff;
     -fx-border-color: #cdcbc9;
     -fx-border-radius: 2;
