@@ -14,8 +14,7 @@ public class Item {
     public String toString() {
         String s;
         String d = desc[0];
-
-        String p;
+        String p = Arrays.toString(this.properties);
 
         s = this.name + "\n" + "Description: " + d + "\n" +
         "Equipment category: " + this.equipment_category + "\n" +
