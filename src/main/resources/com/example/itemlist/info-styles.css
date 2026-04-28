@@ -1,0 +1,11 @@
+.root {
+    -fx-background-color: #f6e1ad;
+}
+
+.label {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #cdcbc9;
+    -fx-border-radius: 2;
+    -fx-border-width: 1px;
+    -fx-background-radius: 2;
+}
