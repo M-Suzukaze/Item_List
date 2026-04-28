@@ -20,7 +20,6 @@ import java.io.IOException;
 
 public class InfoController {
 
-
     @FXML
     private Label infoLabel;
 

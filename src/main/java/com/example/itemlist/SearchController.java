@@ -66,8 +66,10 @@ public class SearchController implements Initializable {
 
     @FXML
     public void random(ActionEvent event){
-        int randomNumber = rand.nextInt(6) + 1;
-        searchBar.setValue(String.valueOf(randomNumber));
+        int randomNumber = rand.nextInt(items.size()) + 1;
+        searchBar.setValue(items.get(randomNumber));
+        itemListView.getItems().clear();
+        itemListView.getItems().addAll(searchAlgorithm((String) searchBar.getValue(), items));
     }
 
     //Requests focus when background is clicked so user can click out of and reopen search history more conveniently

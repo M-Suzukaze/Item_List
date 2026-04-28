@@ -9,7 +9,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.itemlist.InfoController" stylesheets="@info-styles.css">
    <children>
       <Label alignment="CENTER" layoutX="161.0" layoutY="31.0" prefHeight="18.0" prefWidth="178.0" text="Item Information:" />
-      <Label fx:id="infoLabel" alignment="TOP_LEFT" layoutX="91.0" layoutY="98.0" prefHeight="238.0" prefWidth="318.0" text="BLANK" />
+      <Label fx:id="infoLabel" alignment="TOP_LEFT" layoutX="91.0" layoutY="98.0" prefHeight="238.0" prefWidth="318.0" text="BLANK" wrapText="true" minHeight="-Infinity"/>
       <Button fx:id="backButton" layoutX="416.0" layoutY="27.0" mnemonicParsing="false" onAction="#handleBack" text="      " />
       <ImageView fitHeight="26.0" fitWidth="33.0" layoutX="421.0" layoutY="27.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true">
          <Image backgroundLoading="true" url="@images/arrow-left-solid.png" />
