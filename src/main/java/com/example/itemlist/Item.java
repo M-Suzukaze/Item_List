@@ -16,7 +16,7 @@ public class Item {
         s = this.name + "\n" + Arrays.toString(this.desc) + "\n" +
         "Equipment category: " + this.equipment_category + "\n" +
         this.cost + " gold coins" + "\n" + "properties: " + Arrays.toString(this.properties) +
-        "\n" + this.weight + " pounds \n" + this.url;
+        "\n" + "Weight: " + this.weight + " lbs \n" + "Link: https://www.dnd5eapi.co" + this.url;
         return s;
     }
 }
