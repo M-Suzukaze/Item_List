@@ -99,6 +99,7 @@ public class SearchController implements Initializable {
 
         itemListView.setOnMouseClicked(event -> {
             String selected = itemListView.getSelectionModel().getSelectedItem();
+            selected = Format.correctFormat(selected);
             if (selected != null) {
                 showInfo(selected);
             }
