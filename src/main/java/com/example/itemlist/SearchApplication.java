@@ -22,14 +22,7 @@ public class SearchApplication extends Application {
 
     @Override
     public void stop() {
-        try
-        {
-            Files.write(Paths.get("searchHistory.txt"), SearchController.getSearchHistory());
-        }
-        catch (Exception e)
-        {
-            throw new RuntimeException(e);
-        }
+
     }
 
     public static void main(String[] args) {

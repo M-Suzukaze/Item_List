@@ -14,6 +14,8 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.*;
 
 public class SearchController implements Initializable {
@@ -47,6 +49,14 @@ public class SearchController implements Initializable {
         if (searchHistory.size() >= searchHistoryLimit)
             searchHistory.remove(searchHistoryLimit - 1);
         searchBar.getItems().addAll(searchHistory);
+        try
+        {
+            Files.write(Paths.get("searchHistory.txt"), searchHistory);
+        }
+        catch (Exception e)
+        {
+            throw new RuntimeException(e);
+        }
     }
 
     @FXML
@@ -75,6 +85,8 @@ public class SearchController implements Initializable {
         //Checks if search history text file exists, then sets it as current search history if it does
         File searchHistoryFile = new File("searchHistory.txt");
         if (searchHistoryFile.exists()) {
+            searchBar.getItems().clear();
+            searchHistory.clear();
             try (Scanner inputFile = new Scanner(searchHistoryFile)) {
                 while (inputFile.hasNext()) {
                     searchHistory.add(inputFile.nextLine());
