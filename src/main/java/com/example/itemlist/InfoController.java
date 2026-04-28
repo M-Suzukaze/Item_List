@@ -32,7 +32,7 @@ public class InfoController {
 
     public void setItemData(String itemName){
 
-        infoLabel.setText(itemName);
+        infoLabel.setText("loading...");
 
         if(this.client == null) {
             this.client = HttpClient.newHttpClient();
