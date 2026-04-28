@@ -17,6 +17,7 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class SearchController implements Initializable {
 
@@ -43,6 +44,10 @@ public class SearchController implements Initializable {
 
     @FXML
     public void search(ActionEvent event){
+
+        itemListView.getItems().clear();
+        itemListView.getItems().addAll(searchAlgorithm((String) searchBar.getValue(), items));
+
         //Adds current text in search bar to search history, removes 10th item from search history if there are 10 or more items
         searchHistory.add(0, searchBar.getValue());
         searchBar.getItems().clear();
@@ -104,6 +109,17 @@ public class SearchController implements Initializable {
             }
         });
 
+    }
+
+    //Algorithm for parsing the item list for matches with the searched word(s)
+    private List<String> searchAlgorithm(String searchWords, List<String> listOfItems) {
+
+        List<String> searchWordsArray = Arrays.asList(searchWords.trim().split(" "));
+
+        return listOfItems.stream().filter(input -> {
+            return searchWordsArray.stream().allMatch(word ->
+                    input.toLowerCase().contains(word.toLowerCase()));
+        }).collect(Collectors.toList());
     }
 
     private void showInfo(String itemName) {
