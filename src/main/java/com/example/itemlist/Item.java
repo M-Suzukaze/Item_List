@@ -13,9 +13,13 @@ public class Item {
 
     public String toString() {
         String s;
-        s = this.name + "\n" + Arrays.toString(this.desc) + "\n" +
+        String d = desc[0];
+
+        String p;
+
+        s = this.name + "\n" + "Description: " + d + "\n" +
         "Equipment category: " + this.equipment_category + "\n" +
-        this.cost + " gold coins" + "\n" + "properties: " + Arrays.toString(this.properties) +
+        this.cost + " gold coins" + "\n" + "Properties: " + p +
         "\n" + "Weight: " + this.weight + " lbs \n" + "Link: https://www.dnd5eapi.co" + this.url;
         return s;
     }
