@@ -1,3 +1,5 @@
+//M. Gbeddy, M. Jarema , A. Bellina - DnD App
+
 package com.example.itemlist;
 
 import javafx.application.Application;
