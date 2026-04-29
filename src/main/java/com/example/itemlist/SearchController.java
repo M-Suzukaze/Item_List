@@ -5,8 +5,10 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
+import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
@@ -41,6 +43,9 @@ public class SearchController implements Initializable {
 
     @FXML
     private AnchorPane background;
+
+    @FXML
+    private Button searchButton;
 
     @FXML
     public void search(ActionEvent event){
@@ -82,6 +87,14 @@ public class SearchController implements Initializable {
     public void initialize(URL location, ResourceBundle resourceBundle) {
 
         itemListView.getItems().addAll(items);
+
+        //Creates an event listener for so that the search button is clicked whenever the user hits the 'ENTER' key
+        searchBar.setOnKeyPressed(event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                searchButton.requestFocus();
+                searchButton.fire();
+            }
+        });
 
         //Creates listener object to create drop down for search history when the search bar is focused
         searchBar.focusedProperty().addListener((observable, notFocused, isFocused) -> {

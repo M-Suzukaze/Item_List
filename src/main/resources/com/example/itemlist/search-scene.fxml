@@ -10,7 +10,7 @@
 
 <AnchorPane fx:id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#backgroundClicked" prefHeight="400.0" prefWidth="500.0" stylesheets="@search-styles.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.itemlist.SearchController">
    <children>
-      <Button layoutX="309.0" layoutY="27.0" mnemonicParsing="false" onAction="#search" text="Search" />
+      <Button fx:id="searchButton" layoutX="309.0" layoutY="27.0" mnemonicParsing="false" onAction="#search" text="Search" />
       <Button layoutX="401.0" layoutY="27.0" mnemonicParsing="false" onAction="#random" text="     " />
       <ListView fx:id="itemListView" layoutX="30.0" layoutY="78.0" prefHeight="297.0" prefWidth="437.0" />
       <Label alignment="CENTER" layoutX="378.0" layoutY="4.0" prefHeight="18.0" prefWidth="78.0" text="The Button" />
