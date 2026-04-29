@@ -39,7 +39,7 @@ public class Item {
         }
 
         s = this.name + "\n" + "Description: " + d + "\n" +
-        "Equipment category: " + this.equipment_category + "\n" +
+        "Equipment Category: " + this.equipment_category + "\n" +
         this.cost + " gold coins" + "\n" + "Properties: " + p +
         "\n" + "Weight: " + this.weight + " lbs \n" + "Link: https://www.dnd5eapi.co" + this.url;
         return s;
